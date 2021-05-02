@@ -4,5 +4,6 @@ const axios = require("axios"),
 exports.fetchData = async url => {
   let result = await axios.get(url);
   // console.log(result);
-  console.log(cheerio.load(result.data));
+  //console.log(cheerio.load(result.data));
+  return cheerio.load(result.data);
 };
